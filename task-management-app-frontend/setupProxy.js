@@ -6,7 +6,7 @@ module.exports = function (app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'http://localhost:5000', // This should be your backend server URL
+      target: 'https://taskmanagementbackend-saq8.onrender.com', // This should be your backend server URL
       changeOrigin: true,
     })
   );

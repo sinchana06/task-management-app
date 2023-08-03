@@ -21,7 +21,7 @@ connection.once('open', () => {
 app.use(express.json());
 const cors = require('cors');
 const corsOptions ={
-    origin:'http://localhost:3000', 
+    origin:'https://voluble-centaur-76768a.netlify.app', 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }

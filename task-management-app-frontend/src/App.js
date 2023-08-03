@@ -13,7 +13,7 @@ const App = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/tasks');
+      const response = await axios.get('https://taskmanagementbackend-saq8.onrender.com/api/tasks');
       setTasks(response.data);
     } catch (error) {
       console.error('Error fetching tasks:', error);
@@ -28,7 +28,7 @@ const App = () => {
   const handleAddTask = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/tasks', newTask);
+      const response = await axios.post('https://taskmanagementbackend-saq8.onrender.com/api/tasks', newTask);
       setTasks([...tasks, response.data]);
       setNewTask({ title: '', description: '' });
     } catch (error) {
@@ -38,7 +38,7 @@ const App = () => {
 
   const handleDeleteTask = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/tasks/${id}`);
+      await axios.delete(`https://taskmanagementbackend-saq8.onrender.com/api/tasks/${id}`);
       setTasks(tasks.filter((task) => task._id !== id));
     } catch (error) {
       console.error('Error deleting task:', error);
@@ -47,7 +47,7 @@ const App = () => {
 
   const handleUpdateTask = async (id, updates) => {
     try {
-      const response = await axios.put(`http://localhost:5000/api/tasks/${id}`, updates);
+      const response = await axios.put(`https://taskmanagementbackend-saq8.onrender.com/api/tasks/${id}`, updates);
       const updatedTasks = tasks.map((task) =>
         task._id === id ? response.data : task
       );
