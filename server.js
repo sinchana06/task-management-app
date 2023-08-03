@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Connect to MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/mydb', {
+mongoose.connect('mongodb+srv://sinchana06:Aurora1234@cluster0.dvmdong.mongodb.net/mydb', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
